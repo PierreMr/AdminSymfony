@@ -14,6 +14,19 @@ class PagesController extends AbstractController
      */
     public function home()
     {
+        $this->addFlash(
+            'success',
+            'Your changes were saved!'
+        );
+        $this->addFlash(
+            'warning',
+            'Your changes were partially saved!'
+        );
+        $this->addFlash(
+            'danger',
+            'Your changes could not be saved!'
+        );
+
         return $this->render('home.html.twig');
     }
 }
