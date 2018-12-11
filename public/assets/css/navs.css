@@ -1,0 +1,32 @@
+#navbar-nav {
+    background-color: #f8f9fa;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+#navbar-nav .nav-item.active a {
+    border-top: #74BF46 solid 3px;
+    border-radius: 0 10px 0 0;
+}
+
+#sidebar-nav {
+    background-color: #f8f9fa;
+    margin-top: 1rem;
+    border-radius: 1em;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+#sidebar-nav a {
+    color: rgba(0,0,0,.5);
+}
+#sidebar-nav a.active {
+    color: rgba(0,0,0,.9);
+}
+#sidebar-nav a.disabled {
+    color: rgba(0,0,0,.3);
+}
+#sidebar-nav .nav-link:focus, #sidebar-nav .nav-link:hover {
+    color: rgba(0,0,0,.7);
+}
+#sidebar-nav .nav-dropdown {
+	margin-left: 1rem;
+}

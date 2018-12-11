@@ -1,0 +1,35 @@
+.block {
+    background-color: #fff;
+    border-radius: 1em;
+    padding: 0 1rem;
+    border: 1px solid rgba(0,0,0,.15);	
+    margin-top: 1rem;
+}
+
+.block-title {
+	padding-top: 1rem;
+    background: #eee;
+    border-radius: 13px 13px 0 0;
+}
+
+.block-title, .block-body {
+	border-bottom: 1px solid #dee2e6;
+}
+
+.block-body, .block-footer {
+    margin-top: 1rem;
+}
+
+.toggle {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.toggle:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
