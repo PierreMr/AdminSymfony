@@ -21,7 +21,7 @@
     			{% set index = loop.index %}
 			    {% for message in messages %}
 			        <div class="flash flash-{{ label }}" style="top:{{ 3 + 4*index }}rem">
-			            <strong>{{ message }}</strong>
+			            <strong>{{ message }} <span class="font-italic"> x </span></strong>
 			        </div>
 			    {% endfor %}
 			{% endfor %}
@@ -40,6 +40,7 @@
 		</div>
         {% block javascripts %}
 			<script src="/assets/js/script.js"></script>
+			<script src="/assets/js/flash.js"></script>
         {% endblock %}
     </body>
 </html>
