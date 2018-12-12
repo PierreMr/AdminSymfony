@@ -33,15 +33,23 @@ class PagesController extends AbstractController
 
 
     /**
-     * @Route("/get-days/{day}", name="getDays")
+     * @Route("/get-labels/{day}/{view}", name="getLabels")
      */
-    public function getDays($day = null)
+    public function getLabels($day = null, $view = null)
     {
         if ($day == null) $day = date('Y-m-d');
         $jour = '';
-        $days = [];
 
-        for ($i = 0; $i < 7; $i++) {
+        switch ($view) {
+            case 1 : $nb = 7; break;
+            case 2 : $nb = 30; break;
+            case 3 : $nb = 12; break;
+            default : $nb = 7; break;
+        }
+
+        $labels = [];
+
+        for ($i = 0; $i < $nb; $i++) {
             switch (date('l', strtotime($day))) {
                 case 'Monday' : $jour = 'Lun. '; break;
                 case 'Tuesday' : $jour = 'Mar. '; break;
@@ -54,24 +62,32 @@ class PagesController extends AbstractController
 
             $jour .= date('d-m', strtotime($day));
 
-            array_push($days, $jour);
+            array_push($labels, $jour);
 
             $day = date('Y-m-d', strtotime($day .'+1 day'));
         }
 
-        return new JsonResponse($days);
+        return new JsonResponse($labels);
     }
 
 
     /**
-     * @Route("/get-nb-res", name="getNbRes")
+     * @Route("/get-nb-res/{view}", name="getNbRes")
      */
-    public function getNbRes($day = null)
+    public function getNbRes($day = null, $view = null)
     {
         $day = date('Y-m-d');
+
+        switch ($view) {
+            case 1 : $nb = 7; break;
+            case 2 : $nb = 30; break;
+            case 3 : $nb = 12; break;
+            default : $nb = 7; break;
+        }
+
         $nbs = [];
 
-        for ($i = 0; $i < 7; $i++) {
+        for ($i = 0; $i < $nb; $i++) {
             array_push($nbs, rand(0, 20));
         }
 

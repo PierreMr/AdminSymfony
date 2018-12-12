@@ -37,6 +37,6 @@ span.dropcap {
 	border-color: #28a745;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary.active {
-	background-color: #28a745;
-	border-color: #28a745;
+	background-color: #28a745!important;
+	border-color: #28a745!important;
 }
