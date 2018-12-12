@@ -31,3 +31,12 @@ span.dropcap {
     padding: 1rem;
     border: 1px solid rgba(0,0,0,.15);
 }
+
+.btn-primary {
+	background-color: #74bf46;
+	border-color: #28a745;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.active {
+	background-color: #28a745;
+	border-color: #28a745;
+}

@@ -1,0 +1,5 @@
+App\Entity\Reservation:
+  reservation_{1..20}:
+    date: <datetimeBetween('+2 days', '+15 days')>
+    time: <datetime()>
+    comment: <sentence()>
